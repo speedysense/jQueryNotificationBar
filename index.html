@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create a jQuery Header Notification Bar - Demo and Download</title>
+    <link rel="shortcut icon" href="../res/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../res/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.downbar').delay(1000).fadeIn(400).addClass('up');
+            $('.jquery-bar').hide().delay(2500).slideDown(400);
+            $('.jquery-arrow').click(function(){
+                $('.downbar').toggleClass('up', 400);          
+                $('.jquery-bar').slideToggle();
+            });     
+        });
+    </script>
+</head>
+<body>
+    <!-- Start jQuery Notification Bar -->
+    <div class="jquery-bar">
+        <span class="notification">
+            <p class="font-style">
+                <a href="#">Notification details</a>
+            </p> 
+            <p class="jquery-arrow down">
+                <img src="assets/up-arrow.png" alt="Click to Hide Notification"/>
+            </p>
+        </span>
+    </div>
+    <span class="downbar jquery-arrow">
+        <img src="assets/down-arrow.png" alt="Click to Show Notification">
+    </span>
+    <!-- End jQuery Notification Bar -->
+
+</body>
+</html>
